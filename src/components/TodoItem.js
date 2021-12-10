@@ -42,8 +42,11 @@ class TodoItem extends React.Component{
 
         return(
             <li className={styles.item}>
-                <div onDoubleClick={this.handleEditing} style={viewMode}>...</div>
+                <div onDoubleClick={this.handleEditing}
+                     //for multiple conditions
+                     style={(!completed && this.state.editing===false) ? viewMode : (completed && this.state.editing===false ? editMode : (completed && this.state.editing===true ? editMode : viewMode))}>...</div>
                 <input type={"checkbox"}
+                       style={viewMode}
                        className={styles.checkbox}
                        checked={completed}
                        onChange={() => this.props.handleChangeProps(id)}
