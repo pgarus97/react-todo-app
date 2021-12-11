@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 const TodoContainer = () => {
 
 
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState(getInitialTodos())
 
 
     const handleChange = id => {
@@ -56,6 +56,7 @@ const TodoContainer = () => {
     //for lifecycle functions  didMount and didUpdate ; () as argument = function
     //by default on every render, else array dependency needed; empty if no value from render/component needed
     //otherwise everything needed like states, functions, props need to be added
+    /*
     useEffect(() => {
         console.log("test run")
 
@@ -67,6 +68,15 @@ const TodoContainer = () => {
             setTodos(loadedTodos)
         }
     }, []);
+    */
+
+    //second method instead of setTodos in Effect (double render):
+    function getInitialTodos(){
+        //getting stored items
+        const temp = localStorage.getItem("todos")
+        const savedTodos = JSON.parse(temp)
+        return savedTodos || [] // or fallback empty array
+    }
 
     //only reruns if dependency changes; if empty it only does it on mount; this equals didUpdate
     useEffect(() => {
