@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import "./App.css"
-import reportWebVitals from './reportWebVitals';
-import TodoContainer from "./components/TodoContainer";
+import App from './classBased/App';
+//stylesheet
+import "./functionBased/App.css"
+import reportWebVitals from './classBased/reportWebVitals';
+import TodoContainer from "./functionBased/components/TodoContainer";
 
 const element = <h1>Hello from Create React App</h1>
 // component file
