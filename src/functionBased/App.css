@@ -44,6 +44,12 @@ body {
   border-radius: calc(0.5 * 100px);
 }
 
+.input-submit svg {
+  color:darkcyan;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
 .input-text::placeholder {
   color: #000;
 }
@@ -62,4 +68,9 @@ body {
   height: 45px;
   outline: none;
   border: none;
+}
+
+.active {
+  color: orangered;
+  text-decoration: underline;
 }

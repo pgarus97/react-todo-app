@@ -1,4 +1,8 @@
 import React, {useState} from "react"
+import { FaPlusCircle } from "react-icons/fa"
+import { IconContext } from "react-icons"
+
+
 
 //function type ; react hooks only on top level, not conditionals, loops, functions etc.
 const InputTodo = props => {
@@ -39,9 +43,31 @@ const InputTodo = props => {
                    name="title"
                    onChange={onChange}
             />
-            <button className="input-submit">Submit</button>
+            <button className="input-submit">
+                <FaPlusCircle
+                    style={{ color: "darkcyan", fontSize: "20px", marginTop: "2px" }}
+                />
+            </button>
         </form>
     )
+
+        /*
+        //In case of multiple icons next to each other styling with context
+        <IconContext.Provider
+      value={{
+        color: "darkcyan",
+        style: { fontSize: "20px", color: "#ff0000" },
+        className: "submit-iconn",
+      }}
+    >
+      <button className="input-submit">
+        <FaPlusCircle />
+        <FaPlusCircle />
+        <FaPlusCircle />
+      </button>
+    </IconContext.Provider>
+
+         */
 }
 
 
