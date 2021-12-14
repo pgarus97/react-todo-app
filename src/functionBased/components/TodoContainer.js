@@ -3,7 +3,7 @@ import TodosList from "./TodosList"
 import Header from "./Header";
 import InputTodo from "./InputTodo";
 import { v4 as uuidv4 } from "uuid";
-import { Route, Routes} from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 import About from "../pages/About"
 import NotMatch from "../pages/NotMatch"
 import Navbar from "./Navbar";
@@ -94,8 +94,8 @@ const TodoContainer = () => {
     return(
         <>
             <Navbar/>
-            <Routes>
-                <Route exact path="/" element={
+            <Switch>
+                <Route exact path="/">
                     <div className="container">
                         <div className="inner">
                             <Header />
@@ -108,14 +108,14 @@ const TodoContainer = () => {
                             />
                         </div>
                     </div>
-                } />
-                <Route path="/about" element={
+                </Route>
+                <Route path="/about">
                     <About />
-                } />
-                <Route path="*" element={
+                </Route>
+                <Route path="*">
                     <NotMatch />
-                } />
-            </Routes>
+                </Route>
+            </Switch>
         </>
 
     )
