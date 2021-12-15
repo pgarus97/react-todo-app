@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './classBased/App';
-import { HashRouter as Router} from "react-router-dom"
+import { BrowserRouter as Router} from "react-router-dom"
 
 //stylesheet
 import "./functionBased/App.css"
@@ -15,7 +15,7 @@ const element = <h1>Hello from Create React App</h1>
 //first step for routing: wrap container app
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <TodoContainer/>
         </Router>
     </React.StrictMode>,
