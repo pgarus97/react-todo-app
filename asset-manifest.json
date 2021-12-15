@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react_todo_app_learning/static/css/main.4059a95e.chunk.css",
-    "main.js": "/react_todo_app_learning/static/js/main.657257e3.chunk.js",
-    "main.js.map": "/react_todo_app_learning/static/js/main.657257e3.chunk.js.map",
+    "main.js": "/react_todo_app_learning/static/js/main.9c09d5bb.chunk.js",
+    "main.js.map": "/react_todo_app_learning/static/js/main.9c09d5bb.chunk.js.map",
     "runtime-main.js": "/react_todo_app_learning/static/js/runtime-main.29741213.js",
     "runtime-main.js.map": "/react_todo_app_learning/static/js/runtime-main.29741213.js.map",
     "static/js/2.0821acdc.chunk.js": "/react_todo_app_learning/static/js/2.0821acdc.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.29741213.js",
     "static/js/2.0821acdc.chunk.js",
     "static/css/main.4059a95e.chunk.css",
-    "static/js/main.657257e3.chunk.js"
+    "static/js/main.9c09d5bb.chunk.js"
   ]
 }
